@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Add your CSS styles here */
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+    background-color: #151418;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .logo a span {
+    color: #8739fa;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color: #fff;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .logo a{
+        text-decoration: none;
+    }
+    .menu {
+      flex-direction: column;
+      background-color: #151418;
+      align-items: start;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  
+    .menu a {
+      margin-left: 12px;
+      text-decoration: none;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Add your CSS styles here */
+  #home {
+    text-align: center;
+  }
+  
+  .hero-banner {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/hero-bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px;
+  text-align: center;
+  }
+  
+  .hero-banner h1 {
+    font-size: 36px;
+  }
+  
+  .hero-banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-banner button {
+    padding: 10px 20px;
+  font-size: 18px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  }
+  .hero-banner button:hover {
+    background-color: darkorange;
+  }
+  
+  /* Add your CSS styles here */
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+  }
+  
+  .about-content ul {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  /* Add your CSS styles here */
+  #programs {
+    padding: 80px;
+  }
+  
+  #programs h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .program {
+    display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+  }
+  
+  .program img {
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .program-details h3 {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .program-details p {
+    margin-bottom: 10px;
+  }
+  
+  .program-details a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  /* Add your CSS styles here */
+  #faculty {
+    padding: 80px;
+  }
+  
+  #faculty h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .faculty-member {
+    display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  transition: transform 0.3s;
+  }
+  .faculty-member:hover {
+    transform: translateY(-5px);
+  }
+
+  .faculty-member img {
+    width: 200px;
+    height: 200px; /* Add this line to set the height equal to the width */
+    margin-right: 20px;
+    border-radius: 50%;
+    object-fit: cover; /* Add this line to ensure the image covers the entire circle */
+  }
+  
+  
+  .faculty-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .faculty-details p {
+    margin-bottom: 10px;
+  }
+  /* Add your CSS styles here */
+  #facilities {
+    padding: 80px;
+  }
+  
+  #facilities h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .facility {
+    text-align: center;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  }
+  
+  .facility img {
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .facility h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .facility p {
+    margin-bottom: 10px;
+  }
+  /* Add your CSS styles here */
+  #gallery {
+    padding: 80px;
+  }
+  
+  #gallery h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .gallery-images {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  }
+  
+  .gallery-images img {
+    width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  }
+  
+  .gallery-images .gallery-3 {
+    height: 245px;
+  }
+  
+  /* Add your CSS styles here */
+  #contact {
+    padding: 80px;
+  }
+  
+  #contact h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+  margin: 0 auto;
+  }
+  
+  .contact-form form {
+    display: grid;
+    gap: 20px;
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  }
+  
+.contact-form textarea {
+    height: 150px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+.contact-form button:hover {
+    background-color: darkorange;
+  }
+  /* Add your CSS styles here */
+  .footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+    color: #777;
+  }
+  .footer a {
+    color: #777;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #333;
+  }
+  .footer p {
+    margin-bottom: 10px;
+  }
+  
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 100%;
+  }
+  
+  .footer-logo h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer .social {
+    margin-top: 20px;
+  }
+  
+  .footer .social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .footer .footer-social a:hover {
+    background-color: #555;
+  }
+  
+  .footer .footer-social .fa {
+    vertical-align: middle;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+  
+
+  /* Add this CSS for mobile devices */
+@media (max-width: 767px) {
+    .header-limiter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .menu-toggle {
+      display: block;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+    }
+    
+    .nav-menu.active {
+      display: flex;
+    }
+  }
+  
+  /* Add this CSS for larger screens */
+  @media (min-width: 768px) {
+    .header-limiter {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .menu-toggle {
+      display: none;
+    }
+    
+    nav {
+      flex: 1;
+      text-align: center;
+    }
+    
+    nav a {
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  
+
+  /* media queries */
+  @media (max-width: 768px) {
+    .hero-banner {
+      padding: 50px;
+    }
+  
+    .hero-banner h1 {
+      font-size: 24px;
+    }
+  
+    .hero-banner p {
+      font-size: 16px;
+    }
+  
+    .hero-banner button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+    /* about section  */
+    @media (max-width: 768px) {
+        #about {
+          flex-direction: column;
+          padding: 40px;
+        }
+      
+        .about-content {
+          max-width: 100%;
+        }
+      
+        .about-content h2 {
+          font-size: 24px;
+        }
+      
+        .about-image img {
+          width: 100%;
+          max-width: 400px;
+          margin-top: 20px;
+        }
+        
+            .program {
+              grid-template-columns: 1fr;
+              margin-top: 40px;
+            }
+          
+            .program img {
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 20px;
+            }
+            .program-details p {
+                margin-bottom: 30px;
+              }
+              #programs h2{
+                white-space: nowrap;
+              }
+              .faculty-member {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+              }
+            
+              .faculty-member img {
+                margin-right: 0;
+                margin-bottom: 20px;
+              }
+              .facility {
+                padding: 10px;
+              }
+            
+              .facility img {
+                width: 100%;
+                max-width: 300px;
+              }
+              .gallery-images {
+                display: flex;
+                flex-direction: column;
+                object-fit: contain;
+              }
+              .gallery-images img {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+                margin: 0 auto;
+              }
+              .gallery-images .gallery-3{
+                height: 150px;
+              }
+              .contact-form {
+                max-width: 100%;
+                padding: 0 20px;
+              }
+              .footer-content {
+                flex-direction: column;
+              }
+            
+              .footer-links {
+                margin-top: 20px;
+              }
+            
+              .footer-logo {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        
+ 
