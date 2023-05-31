@@ -126,7 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('.\hero-bg-image.jpg');
+  background-image: url('hero-bg-image.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
